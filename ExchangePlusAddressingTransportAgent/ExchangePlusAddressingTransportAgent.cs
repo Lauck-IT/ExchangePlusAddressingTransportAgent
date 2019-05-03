@@ -1,4 +1,4 @@
-﻿/*
+/*
  * A Simple Exchange Transport Protocol agent that implements plus email addressing
  * 
  * James DeVincentis 
@@ -10,22 +10,22 @@ using System;
 using Microsoft.Exchange.Data.Transport;
 using Microsoft.Exchange.Data.Transport.Smtp;
 
-namespace PlusAgent
+namespace ExchangePlusAddressingTransportAgent
 {
     public sealed class PlusFactory : SmtpReceiveAgentFactory
     {
         public override SmtpReceiveAgent CreateAgent(SmtpServer server)
         {
-            return new PlusAgent(server.AddressBook);
+            return new ExchangePlusAddressingTransportAgent(server.AddressBook);
         }
     }
 
-    public class PlusAgent : SmtpReceiveAgent
+    public class ExchangePlusAddressingTransportAgent : SmtpReceiveAgent
     {
 
         private readonly AddressBook _addressBook;
         
-        public PlusAgent(AddressBook addressBook)
+        public ExchangePlusAddressingTransportAgent(AddressBook addressBook)
         {
             _addressBook = addressBook;
             OnRcptCommand += RcptToHandler;

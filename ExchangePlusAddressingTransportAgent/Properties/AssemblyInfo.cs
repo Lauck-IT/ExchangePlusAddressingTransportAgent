@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("PlusAgent")]
+[assembly: AssemblyTitle("ExchangePlusAddressingTransportAgent")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PlusAgent")]
+[assembly: AssemblyProduct("ExchangePlusAddressingTransportAgent")]
 [assembly: AssemblyCopyright("Copyright James DeVincentis 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
