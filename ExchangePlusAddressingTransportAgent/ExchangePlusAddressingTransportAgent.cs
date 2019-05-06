@@ -12,7 +12,7 @@ using Microsoft.Exchange.Data.Transport.Smtp;
 
 namespace ExchangePlusAddressingTransportAgent
 {
-    public sealed class PlusFactory : SmtpReceiveAgentFactory
+    public sealed class Factory : SmtpReceiveAgentFactory
     {
         public override SmtpReceiveAgent CreateAgent(SmtpServer server)
         {

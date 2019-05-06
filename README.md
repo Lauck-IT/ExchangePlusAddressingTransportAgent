@@ -1,5 +1,7 @@
-PlusAgent
+ExchangePlusAddressingTransportAgent
 ==================
+
+forked from eguichar/PlusAgent
 
 > To work correctly you must build the solution with references to 
 > the correct Microsoft Exchange DLLs.
@@ -16,16 +18,17 @@ https://en.wikipedia.org/wiki/Email_address#Sub-addressing
 
 Usage:
 -----
-1. Build from source or download pre-compiled DLLS from here: https://kill-9.me/524/exchange-email-plussing-transport-agent 
+1. Build from source or download pre-compiled DLLS from here: --- old, not working: https://kill-9.me/524/exchange-email-plussing-transport-agent  ---
+   new: https://github.com/wech71/ExchangePlusAddressingTransportAgent/releases
 
-2. Copy the compiled .dll file to C:\CustomAgents\PlusAgent.dll
+2. Copy the compiled .dll file to C:\ExchangeCustomAgents\ExchangePlusAddressingTransportAgent.dll
 
 3. Install the agent and set its priority so it is above the recipient filter.
   ```
-  Install-TransportAgent -Name "Email Plus Agent" -TransportAgentFactory:PlusAgent.PlusFactory -AssemblyPath:"C:\CustomAgents\PlusAgent.dll"
+  Install-TransportAgent -Name "Email SMTP Plus Addressing Agent" -TransportAgentFactory:ExchangePlusAddressingTransportAgent.Factory -AssemblyPath:"C:\ExchangeCustomAgents\ExchangePlusAddressingTransportAgent.dll"
   Get-TransportAgent
-  Set-TransportAgent "Email Plus Agent" -Priority:7
-  Enable-TransportAgent "Email Plus Agent"
+  Set-TransportAgent "Email SMTP Plus Addressing Agent" -Priority:7
+  Enable-TransportAgent "Email SMTP Plus Addressing Agent"
   restart-service msexchangetransport
   ```
   
